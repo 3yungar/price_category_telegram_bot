@@ -1,0 +1,7 @@
+version: '3'
+services:
+  bot:
+    build: .
+    environment: 
+      PRICE_CATEGORY_TOKEN: ${PRICE_CATEGORY_TOKEN}
+    command: python bot.py
