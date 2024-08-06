@@ -1,51 +1,64 @@
 # Price Category Telegram Bot
 
-This repository contains the source code for a Telegram bot designed to categorize products by price. The bot assists users in organizing and comparing products based on their price categories, providing a convenient tool for managing shopping lists or inventory.
+Этот репозиторий содержит исходный код для Telegram-бота, предназначенного для расчета ценовых категорий тарифов по энергопотреблению. Бот принимает данные из Excel файла с двумя столбцами ['time', 'consumption'], обрабатывает их и выдает результаты в новом Excel файле с расчетами. Бот помогает пользователям:
 
-## Features
+- Распределять энергопотребление по первой, второй и третьей ценовым категориям для потребителей МОСЭНЕРГОСБЫТ.
+- Упрощает взаимодействие с данными через интерфейс Telegram.
 
-- Categorizes products into predefined price ranges
-- Supports adding, removing, and listing products
-- Calculates the first, second, and third price categories for electricity consumers of MOSENERGOSBYT
-- Interactive Telegram bot interface for user-friendly interaction
-- Docker support for easy deployment
+## Возможности
 
-## Installation
+- Обработка часовых данных энергопотребления из Excel файла.
+- Вывод расчетов в формате Excel.
+- Интерактивный интерфейс Telegram-бота.
+- Поддержка Docker для простой развертки.
 
-1. Clone the repository:
+## Описание ценовых категорий
+
+Ценовые категории электроэнергии — это набор тарифных условий для оплаты электроэнергии. Существует шесть ценовых категорий, из которых наиболее распространены первые три:
+
+1. **Первая ценовая категория** — тариф включает стоимость электроэнергии и единый тариф на услуги по передаче.
+2. **Вторая ценовая категория** — тарифы дифференцируются по двум зонам суток: пиковой и непиковой.
+3. **Третья ценовая категория** — включает дифференциацию тарифов по трём зонам суток: пиковой, полупиковой и ночной.
+
+Выбор подходящей категории позволяет предприятиям оптимизировать затраты на электроэнергию в зависимости от их профиля потребления и уровня напряжения.
+
+## Установка
+
+1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/3yungar/price_category_telegram_bot
    cd price_category_telegram_bot
    ```
-2. Install dependencies:
+2. Установите зависимости:
    ```bash
    pip install -r requirements.txt
    ```
-3. Set up environment variables for the Telegram bot token.
+3. Настройте переменные окружения для токена Telegram-бота.
 
-## Usage
+## Использование
 
-1. Run the bot:
+1. Запустите бота:
    ```bash
    python bot.py
    ```
-2. Interact with the bot via Telegram to categorize and manage your products.
+2. Взаимодействуйте с ботом через Telegram для расчета тарифных категорий.
+3. Загрузите Excel файл с двумя столбцами ['time', 'consumption'] для обработки.
 
 ## Docker
 
-To deploy the bot using Docker:
+Для развертки бота с использованием Docker:
 ```bash
 docker-compose up --build
 ```
 
-## Contributing
+## Вклад
 
-Feel free to open issues or submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+Не стесняйтесь открывать вопросы или отправлять запросы на внесение изменений. Для крупных изменений сначала откройте вопрос, чтобы обсудить, что вы хотите изменить.
 
-## License
+## Лицензия
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Этот проект лицензирован под лицензией MIT. См. файл [LICENSE](LICENSE) для деталей.
 
 ---
 
-For more details, visit the [GitHub repository](https://github.com/3yungar/price_category_telegram_bot).
+Для получения дополнительной информации посетите [GitHub репозиторий](https://github.com/3yungar/price_category_telegram_bot).
